@@ -1,0 +1,16 @@
+#!/bin/bas
+
+alias push="reset;clear;git add .;git commit -m 'automated terminal push';git push origin;"
+
+##
+
+alias shinobiNET='ssh software-shinobi@shinobinet.online'
+
+##
+
+alias vpn="sudo pkill openvpn;sudo openvpn ~/.shinobiNET-openvpn-config.ovpn"
+alias @vpn="vpn"
+
+##
+
+alias sso="ssh -i ~/.keys/softwareshinobi.online.pem software-shinobi@softwareshinobi.online"
