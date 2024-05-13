@@ -1,8 +1,84 @@
+#!/bin/bash
+
+##
+## docker aliases
+##
+
+alias d.stop="docker stop $(docker ps -a -q)"
+
+alias d.prune="docker system prune -a -f"
+
+##
+## some more ls aliases
+##
+
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+
+##
+## uncategorized
+##
+
+alias r="reset;clear;"
+
+alias push="reset;clear;git add .;git commit -m 'automated terminal push';git push origin;"
+
+## video editing things
+
+alias record="recordmydesktop on-the-fly-encoding --no-sound"
+
+##
+
+alias d="docker"
+
+alias c="docker-compose"
+
+alias compose='docker-compose'
+
+## incoming
+
+alias ll='ls -l'
+
+alias r="reset;clear;"
+
+##
+
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+
+##
+
+alias @memory-info='free -m -l -t'
+alias @memory-top='ps auxf | sort -nr -k 4 | head -10'
+alias @memory-top-10='ps auxf | sort -nr -k 4 | head -10'
+ 
+alias @cpu-info='lscpu'
+alias @cpu-top='ps auxf | sort -nr -k 3'
+alias @cpu-top-10='ps auxf | sort -nr -k 3 | head -10'
+
+alias @net-open-ports="sudo netstat -tlpn"
+alias @net-external-ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias @net-internal-interfaces="dig +short myip.opendns.com @resolver1.opendns.com"
+
+## aliases for accessing cloud desktop
+
+alias dustydepot="ssh dustydepot0@linux.softwareshinobi.digital -p 4444"
+
+##
+## everything below here is factory bullshit
+##
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-source ~/.software-shinobi
+
 
 # If not running interactively, don't do anything
 case $- in
