@@ -16,12 +16,14 @@ gli clone this project. and then copy my bashrc to your .bashrc
 
 ```
 git clone https://github.com/softwareshinobi/software-shinobi-bashrc.git
+
+cd software-shinobi-bashrc
 ```
 
 ### overwrite your existing bashrc
 
 ```
-mv ./bashrc ~/.bashrc
+cp ./bashrc ~/.bashrc
 ```
 
 ### update permissions on your bashrc
