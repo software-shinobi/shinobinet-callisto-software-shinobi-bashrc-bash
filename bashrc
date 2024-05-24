@@ -1,29 +1,30 @@
 #!/bin/bash
 
 ##
-## docker aliases
-##
-
-alias d.stop="docker stop $(docker ps -a -q)"
-
-alias d.prune="docker system prune -a -f"
-
-##
-## some more ls aliases
-##
-
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-
-##
 ## uncategorized
 ##
 
 alias r="reset;clear;"
 
+##
+## docker aliases
+##
+
+function stop(){
+
+    docker stop $(docker ps -a -q)
+}
+
+
+alias prune="docker system prune -a -f;docker volume prune -a -f"
+
+##
+## github
+##
+
 alias push="reset;clear;git add .;git commit -m 'automated terminal push';git push origin;"
+
+alias pushe="reset;clear;git add .;git commit -m 'automated terminal push';git push origin;"
 
 ## video editing things
 
@@ -74,6 +75,7 @@ alias dustydepot="ssh dustydepot0@linux.softwareshinobi.digital -p 4444"
 ##
 ## everything below here is factory bullshit
 ##
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
